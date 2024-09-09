@@ -11,14 +11,8 @@ const Part7 = () => {
       const { width, height } = Dimensions.get('window');
       setOrientation(width > height ? 'Ngang' : 'Dọc');
     };
-
-    // Set initial orientation
     updateLayout();
-
-    // Add event listener for orientation changes
     const subscription = Dimensions.addEventListener('change', updateLayout);
-
-    // Clean up
     return () => {
       subscription.remove();
     };
@@ -26,7 +20,6 @@ const Part7 = () => {
 
   useEffect(() => {
     if (Platform.OS === 'ios') {
-      // iOS specific customizations
       if (orientation === 'landscape') {
         setStatusBarStyle('light-content');
         setStatusBarBackgroundColor('#000000');
@@ -35,7 +28,6 @@ const Part7 = () => {
         setStatusBarBackgroundColor('#ffffff');
       }
     } else {
-      // Android specific customizations
       if (orientation === 'landscape') {
         setStatusBarStyle('light-content');
         setStatusBarBackgroundColor('#000000');

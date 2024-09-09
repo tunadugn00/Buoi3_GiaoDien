@@ -8,14 +8,8 @@ const Part3 = () => {
     const handleOrientationChange = ({ window: { width, height } }) => {
       setIsPortrait(height > width);
     };
-
-    // Thiết lập trạng thái ban đầu
     handleOrientationChange({ window: Dimensions.get('window') });
-
-    // Lắng nghe sự kiện thay đổi kích thước (bao gồm thay đổi hướng)
     const subscription = Dimensions.addEventListener('change', handleOrientationChange);
-
-    // Cleanup listener khi component unmount
     return () => {
       subscription.remove();
     };

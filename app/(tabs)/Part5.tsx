@@ -1,29 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { View, Image, Button, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import React from 'react';
+import {
+  View,
+  Image,
+  Button,
+  StyleSheet,
+  useWindowDimensions,
+  ScrollView
+} from 'react-native';
 
 const Part5 = () => {
-  const [orientation, setOrientation] = useState('portrait');
-  const [screenDimensions, setScreenDimensions] = useState(Dimensions.get('window'));
+  const { width, height } = useWindowDimensions();
+  const orientation = width > height ? 'landscape' : 'portrait';
 
-  useEffect(() => {
-    const updateLayout = ({ window: { width, height } }) => {
-      setScreenDimensions({ width, height });
-      setOrientation(width > height ? 'landscape' : 'portrait');
-    };
-
-    // Set initial orientation
-    updateLayout({ window: Dimensions.get('window') });
-
-    // Add event listener for orientation changes
-    const subscription = Dimensions.addEventListener('change', updateLayout);
-
-    // Clean up the subscription when the component unmounts
-    return () => {
-      subscription?.remove();
-    };
-  }, []);
-
-  const imageHeight = orientation === 'landscape' ? screenDimensions.height * 0.4 : screenDimensions.height * 0.3;
+  const imageHeight = orientation === 'landscape' ? height * 0.4 : height * 0.3;
   const buttonSize = orientation === 'landscape' ? { width: 150, height: 50 } : { width: 120, height: 40 };
 
   return (
@@ -32,16 +21,14 @@ const Part5 = () => {
         source={require('./home.png')}
         style={[
           styles.image,
-          { height: imageHeight, width: screenDimensions.width * 0.8 }
+          { height: imageHeight, width: width * 0.8 }
         ]}
         resizeMode="contain"
       />
-      <View
-        style={[
-          styles.buttonContainer,
-          orientation === 'landscape' ? styles.landscapeButtons : styles.portraitButtons
-        ]}
-      >
+      <View style={[
+        styles.buttonContainer,
+        orientation === 'landscape' ? styles.landscapeButtons : styles.portraitButtons
+      ]}>
         <Button
           title="Button 1"
           onPress={() => console.log('Button 1 pressed')}

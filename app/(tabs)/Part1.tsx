@@ -2,10 +2,7 @@ import React from 'react';
 import { View, Button, StyleSheet, useWindowDimensions } from 'react-native';
 
 const Part1 = () => {
-  // Sử dụng useWindowDimensions hook
   const { width: screenWidth } = useWindowDimensions();
-
-  // Tính toán độ rộng của các nút bấm
   const buttonWidth = screenWidth / 2;
 
   return (
@@ -30,6 +27,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-});
+
+
+}
+
+);
 
 export default Part1;
