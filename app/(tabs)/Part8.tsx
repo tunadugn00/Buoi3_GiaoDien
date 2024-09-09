@@ -180,7 +180,7 @@ const Part8 = () => {
         backgroundColor={Platform.OS === 'ios' ? '#ffffff' : '#FFCCCC'}
         
       />
-      <Text style={styles.text}>Định hướng: {orientation7}</Text>
+      <Text style={styles.text}>Direction: {orientation7}</Text>
     </View>
 
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
