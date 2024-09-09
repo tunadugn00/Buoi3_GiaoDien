@@ -4,28 +4,27 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Use Expo icons or any other icon library
 
-// Import your project components
-import HelloWorld from './Part1';
-import Part2 from './Part2';
-import CustomComponent from './CustomComponent';
-import State_Props from './State_Props';
-import Styling from './Styling';
-import ScrollableContent from './ScrollableContent';
-import Form_input from './Form_input';
-import Long_List from './Long_List';
 import Part1 from './Part1';
+import Part2 from './Part2';
+import Part3 from './Part3';
+import Part4 from './Part4';
+import Part5 from './Part5';
+import Part6 from './Part6';
+import Part7 from './Part7';
+import Part8 from './Part8';
+
 
 const Stack = createNativeStackNavigator();
 
 const projects = [
   { name: 'Part1', title: 'Part1', icon: 'reorder-four' },
   { name: 'Part2', title: 'Part2', icon: 'reorder-four' },
-  { name: 'CustomComponent', title: 'Custom Component', icon: 'reorder-four' },
-  { name: 'State_Props', title: 'State & Props', icon: 'reorder-four' },
-  { name: 'Styling', title: 'Styling', icon: 'reorder-four' },
-  { name: 'ScrollableContent', title: 'Scrollable Content', icon: 'reorder-four' },
-  { name: 'Form_input', title: 'Form Input', icon: 'reorder-four' },
-  { name: 'Long_List', title: 'Long List', icon: 'reorder-four' },
+  { name: 'Part3', title: 'Part3', icon: 'reorder-four' },
+  { name: 'Part4', title: 'Part4', icon: 'reorder-four' },
+  { name: 'Part5', title: 'Part5', icon: 'reorder-four' },
+  { name: 'Part6', title: 'Part6', icon: 'reorder-four' },
+  { name: 'Part7', title: 'Part7', icon: 'reorder-four' },
+  { name: 'Part8', title: 'Part8', icon: 'reorder-four' },
 ];
 
 function Home({ navigation }: { navigation: any }) {
@@ -41,12 +40,12 @@ function Home({ navigation }: { navigation: any }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>React Native Beginner Projects</Text>
+      <Text style={styles.title}>Gumayusiuuuuuuuu</Text>
       <FlatList
         data={projects}
         renderItem={renderProject}
         keyExtractor={(item) => item.name}
-        numColumns={2} // Display two cards per row
+        numColumns={2} 
       />
     </View>
   );
@@ -59,12 +58,12 @@ export default function HomeScreen() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Part1" component={Part1} />
         <Stack.Screen name="Part2" component={Part2} />
-        <Stack.Screen name="CustomComponent" component={CustomComponent} />
-        <Stack.Screen name="State_Props" component={State_Props} />
-        <Stack.Screen name="Styling" component={Styling} />
-        <Stack.Screen name="ScrollableContent" component={ScrollableContent} />
-        <Stack.Screen name="Form_input" component={Form_input} />
-        <Stack.Screen name="Long_List" component={Long_List} />
+        <Stack.Screen name="Part3" component={Part3} />
+        <Stack.Screen name="Part4" component={Part4} />
+        <Stack.Screen name="Part5" component={Part5} />
+        <Stack.Screen name="Part6" component={Part6} />
+        <Stack.Screen name="Part7" component={Part7} />
+        <Stack.Screen name="Part8" component={Part8} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -73,13 +72,13 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212', // Dark background
+    backgroundColor: '#FFCCCC', 
     padding: 16,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: 'black',
     textAlign: 'center',
     marginBottom: 20,
   },

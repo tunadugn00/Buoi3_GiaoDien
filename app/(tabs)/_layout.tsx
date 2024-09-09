@@ -4,6 +4,7 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -23,67 +24,119 @@ export default function TabLayout() {
           ),
         }}
       />
+      
       <Tabs.Screen
-        name="explore"
+        name="Part1"
         options={{
-          title: 'Explore',
+          title: 'Part1',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="heloworld"
-        options={{
-          title: 'Hello',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
       
       <Tabs.Screen
-        name="AlertButtons"
+        name="Part2"
         options={{
-          title: 'Alert',
+          title: 'Part2',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
 
 
       <Tabs.Screen
-        name="CustomsComponent"
+        name="Part3"
         options={{
-          title: 'Custome',
+          title: 'Part3',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
 
 
       <Tabs.Screen
-        name="State_Props"
+        name="Part4"
         options={{
-          title: 'State and Properties',
+          title: 'Part4',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="Styling"
+        name="Part5"
         options={{
-          title: ' Styling',
+          title: 'Part5',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Part6"
+        options={{
+          title: 'Part6',
+          tabBarIcon: ({ color, focused }) => (
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Part7"
+        options={{
+          title: 'Part7',
+          tabBarIcon: ({ color, focused }) => (
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Part8"
+        options={{
+          title: 'Part8',
+          tabBarIcon: ({ color, focused }) => (
+            <MaterialCommunityIcons
+              name={focused ? 'star' : 'star-outline'}
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
     </Tabs>
+    
       
     
   );

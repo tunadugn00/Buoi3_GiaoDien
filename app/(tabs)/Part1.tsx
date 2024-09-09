@@ -1,32 +1,34 @@
 import React from 'react';
-import { View, Button, Dimensions, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet, useWindowDimensions } from 'react-native';
 
 const Part1 = () => {
-  // Lấy chiều rộng của màn hình
-  const windowWidth = Dimensions.get('window').width;
+  // Sử dụng useWindowDimensions hook
+  const { width: screenWidth } = useWindowDimensions();
+
+  // Tính toán độ rộng của các nút bấm
+  const buttonWidth = screenWidth / 2;
 
   return (
     <View style={styles.container}>
-      <View style={[styles.buttonContainer, { width: windowWidth / 2 }]}>
-        <Button title="Button 1" onPress={() => {}} />
+      <View style={[styles.buttonContainer, { width: buttonWidth }]}>
+        <Button title="Button 1" onPress={() => console.log('Button 1 pressed')} />
       </View>
-      <View style={[styles.buttonContainer, { width: windowWidth / 2 }]}>
-        <Button title="Button 2" onPress={() => {}} />
+      <View style={[styles.buttonContainer, { width: buttonWidth }]}>
+        <Button title="Button 2" onPress={() => console.log('Button 2 pressed')} />
       </View>
     </View>
   );
 };
 
-// Style cho giao diện
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row', // Sắp xếp các nút theo hàng ngang
-    justifyContent: 'center', // Căn giữa các nút
-    alignItems: 'center', // Căn giữa theo chiều dọc
     flex: 1,
+    flexDirection: 'row',
   },
   buttonContainer: {
-    margin: 10,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

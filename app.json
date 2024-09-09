@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "LAB1",
-    "slug": "LAB1",
+    "name": "Buoi3",
+    "slug": "Buoi3",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
